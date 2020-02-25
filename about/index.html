@@ -12,10 +12,16 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://luguo124.github.io/Blog//favicon.ico?v=1582600993043">
+<link rel="shortcut icon" href="https://luguo124.github.io/Blog//favicon.ico?v=1582602804900">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://luguo124.github.io/Blog//styles/main.css">
 
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
 
 
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -30,7 +36,7 @@
   <div class="site-header">
     <div class="left">
       <a href="https://luguo124.github.io/Blog/">
-        <img class="avatar" src="https://luguo124.github.io/Blog//images/avatar.png?v=1582600993043" alt="" width="32px" height="32px">
+        <img class="avatar" src="https://luguo124.github.io/Blog//images/avatar.png?v=1582602804900" alt="" width="32px" height="32px">
       </a>
       <a href="https://luguo124.github.io/Blog/">
         <h1 class="site-title">Li Tao&#39;s Blog</h1>
@@ -113,6 +119,12 @@
       </div>
 
       
+        
+          <div id="gitalk-container"></div>
+        
+
+        
+      
 
       <div class="site-footer">
   <div class="slogan">凡走过的必留下痕迹，所有的弯路，其实都是直路</div>
@@ -146,6 +158,29 @@ var app = new Vue({
 })
 
 </script>
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '26c316f608fc8b4fc756',
+        clientSecret: '91ea1f72e5ac5cb65804ce9396325bd803fa71b5',
+        repo: 'Blog',
+        owner: 'luguo124',
+        admin: ['luguo124'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
 
 
 
